@@ -17,6 +17,8 @@ class Converter:
         for k, v in self.mappings.items():
             if current.startswith(k):
                 return (current[len(k):], processed+v)
+        else:
+            return current[1:], processed+current[0]
 
 
     def process_word(self, word: str) -> str:
@@ -50,8 +52,12 @@ if __name__ == '__main__':
         'chha',
         'instagram',
         'mero naam bibek aum',
+        'kaam chhaina timro haN?',
         'googlele',
         'messengermaa message aayo',
+        'gurungsenee',
+        'e',
+        'timee kina hola yastee bhaakee?'
     ]
     converter = Converter(get_mappings(), get_word_maps())
     for text in texts[:]:

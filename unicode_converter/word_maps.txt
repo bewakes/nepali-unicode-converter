@@ -11,3 +11,4 @@ phone फोन
 code कोड
 google गूगल
 message मेसेज
+hola होला
