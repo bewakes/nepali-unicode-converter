@@ -75,8 +75,7 @@ if __name__ == '__main__':
         'kaMsha',
         'aNNgaara',
         'yuNNs',
-        'ma',
-        'RiShi',
+        'ma RiShi ho .',
     ]
     converter = Converter(get_mappings(), get_word_maps())
     for text in texts[:]:

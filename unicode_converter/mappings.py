@@ -94,7 +94,8 @@ def get_mappings() -> Mappings:
         assert len(all_mappings) == curr_key_counts + len(halantas)
         curr_key_counts += len(halantas)
 
-
+    # add purnabiram
+    all_mappings['.'] = '।'
     return dict(sorted(all_mappings.items(), key=lambda x: len(x[0]), reverse=True))
 
 
