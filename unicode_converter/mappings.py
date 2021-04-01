@@ -1,8 +1,10 @@
-from typing import List, Dict
+import os
+from typing import Dict
+
 
 Mappings = Dict[str, str]
 
-basic_vowels = {
+basic_vowels: Mappings = {
     'a': 'अ',
     'aa': 'आ',
     'ee': 'ई ',
@@ -51,6 +53,7 @@ akaars: Mappings = {
     'nga': 'ङ',
     'pa': 'प',
     'pha': 'फ',
+    'fa': 'फ',
     'ba': 'ब',
     'bha': 'भ',
     'va': 'भ',
@@ -101,7 +104,11 @@ def get_mappings() -> Mappings:
 
 def get_word_maps() -> Mappings:
     maps: Mappings = {}
-    with open('word_maps.txt', 'r') as f:
+    filepath = os.path.join(
+        os.path.dirname(__file__),
+        'word_maps.txt'
+    )
+    with open(filepath, 'r') as f:
         for line in f.readlines():
             if not line.strip():
                 continue
@@ -109,6 +116,8 @@ def get_word_maps() -> Mappings:
             maps[w] = uni
     return maps
 
+
+# TODO: include these as well
 map_str = '''
 ng ङ् ङ्ग
 gy ग्य् ज्ञ्
@@ -117,4 +126,4 @@ gya ज्ञ ग्या
 
 if __name__ == '__main__':
     all_maps = get_mappings()
-    # print(all_maps)
+    print(all_maps)

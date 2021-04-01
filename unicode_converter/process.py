@@ -7,9 +7,9 @@ State = Tuple[str, str, str]
 
 
 class Converter:
-    def __init__(self, mappings, word_maps):
-        self.mappings = mappings
-        self.word_maps = word_maps
+    def __init__(self):
+        self.mappings = get_mappings()
+        self.word_maps = get_word_maps()
 
     def consume(self, state: State) -> State:
         consumed, current, processed = state
@@ -53,9 +53,9 @@ class Converter:
                 break
         return processed
 
-    def convert(self, text: str) -> List[str]:
+    def convert(self, text: str) -> str:
         words = text.strip().split()
-        return [self.process_word(word) for word in words]
+        return ' '.join([self.process_word(word) for word in words])
 
 # TODO: GYAAS, etc
 
@@ -75,8 +75,8 @@ if __name__ == '__main__':
         'kaMsha',
         'aNNgaara',
         'yuNNs',
-        'ma RiShi ho .',
+        'ma RiShi ho.',
     ]
-    converter = Converter(get_mappings(), get_word_maps())
+    converter = Converter()
     for text in texts[:]:
         print(converter.convert(text))
