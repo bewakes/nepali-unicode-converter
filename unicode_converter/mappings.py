@@ -4,7 +4,7 @@ Mappings = Dict[str, str]
 
 basic_vowels = {
     'a': 'अ',
-    'aa': 'आ ',
+    'aa': 'आ',
     'ee': 'ई ',
     'i': 'इ',
     'u': 'उ',
@@ -53,6 +53,7 @@ akaars: Mappings = {
     'pha': 'फ',
     'ba': 'ब',
     'bha': 'भ',
+    'va': 'भ',
     'ma': 'म',
     'ya': 'य',
     'ra': 'र',
@@ -68,6 +69,9 @@ akaars: Mappings = {
 }
 
 halanta = '्'
+amkaar = 'ं'
+aNNkaar = 'ँ'
+Ri = 'ृ'
 
 
 def get_mappings() -> Mappings:
@@ -90,6 +94,7 @@ def get_mappings() -> Mappings:
         assert len(all_mappings) == curr_key_counts + len(halantas)
         curr_key_counts += len(halantas)
 
+
     return dict(sorted(all_mappings.items(), key=lambda x: len(x[0]), reverse=True))
 
 
@@ -104,7 +109,6 @@ def get_word_maps() -> Mappings:
     return maps
 
 map_str = '''
-N ण् ं ँ
 ng ङ् ङ्ग
 gy ग्य् ज्ञ्
 gya ज्ञ ग्या
@@ -112,4 +116,4 @@ gya ज्ञ ग्या
 
 if __name__ == '__main__':
     all_maps = get_mappings()
-    print(all_maps)
+    # print(all_maps)
