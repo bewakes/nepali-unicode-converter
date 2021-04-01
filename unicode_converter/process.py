@@ -21,24 +21,19 @@ class Converter:
             return (consumed + current[:2], current[2:], processed + aNNkaar)
 
         # Special case for Ri and Ree
-        if current.startswith('Ri') and consumed[-1] != 'a':
+        if current.startswith('RI') and consumed[-1] != 'a':
             # remove halanta and add Ri
             return (consumed + current[:2], current[2:], processed[:-1] + Ri)
-        if current.startswith('Ri') and consumed[-1] == 'a':
+        if current.startswith('RI') and consumed[-1] == 'a':
             # normal proceeding
             return (consumed + current[:2], current[2:], processed + Ri)
-
-        if current.startswith('Ree') and consumed[-1] != 'a':
-            # remove halanta and add Ri
-            return (consumed + current[:3], current[2:], processed[:-1] + Ri)
-        if current.startswith('Ree') and consumed[-1] == 'a':
-            # normal proceeding
-            return (consumed + current[:3], current[2:], processed + Ri)
 
         for k, v in self.mappings.items():
             if current.startswith(k):
                 return (consumed + current[:len(k)], current[len(k):], processed+v)
         else:
+            # TODO: what if upper case and does not match any pattern?
+            # In that case try lower casing char by char
             return consumed + current[0], current[1:], processed+current[0]
 
     def process_word(self, word: str) -> str:
@@ -62,25 +57,26 @@ class Converter:
         words = text.strip().split()
         return [self.process_word(word) for word in words]
 
+# TODO: GYAAS, etc
 
 
 if __name__ == '__main__':
     texts = [
+        'gaahro',
         'aaNNkhaa',
-        'hajurabuwaale',
-        'samRiddha',
-        'gahro',
+        'samRIddha',
+        'garyo',
         'hudai',
         'instagram',
         'aum nama: shiwaaye',
         'kaam chhaina timro, haNN?',
         'messengermaa message aayo',
-        'raam',
         'aNDaa',
         'kaMsha',
         'aNNgaara',
         'yuNNs',
         'ma',
+        'RiShi',
     ]
     converter = Converter(get_mappings(), get_word_maps())
     for text in texts[:]:
