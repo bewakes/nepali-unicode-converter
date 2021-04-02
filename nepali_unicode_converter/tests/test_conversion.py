@@ -1,4 +1,4 @@
-from unicode_converter.convert import Converter
+from nepali_unicode_converter.convert import Converter
 
 
 test_cases = [

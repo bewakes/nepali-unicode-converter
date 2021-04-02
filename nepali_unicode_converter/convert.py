@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List, TypeVar, Tuple
 
-from unicode_converter.mappings import (
+from nepali_unicode_converter.mappings import (
     get_mappings,
     consonant_kaars,
     get_word_maps,
