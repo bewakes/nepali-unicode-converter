@@ -16,7 +16,6 @@ basic_vowels: Mappings = {
     'e': 'ए',
     'ai': 'ऐ',
     'o': 'ओ',
-    'aum': 'ॐ',
 }
 
 consonant_kaars: Mappings = {
@@ -36,10 +35,13 @@ akaars: Mappings = {
     'kha': 'ख',
     'ga': 'ग',
     'gha': 'घ',
+    'Nga': 'ङ',
+    'NGa': 'ङ्ग',
     'cha': 'च',
     'chha': 'छ',
     'ja': 'ज',
-    'jha': 'झा',
+    'jha': 'झ',
+    'yNa': 'ञ',
     'Ta': 'ट',
     'Tha': 'ठ',
     'Da': 'ड',
@@ -69,6 +71,7 @@ akaars: Mappings = {
     'ksha': 'क्ष',
     'tra': 'त्र',
     'gya': 'ज्ञ',
+    'gYa': 'ग्य',
 }
 
 halanta = '्'
@@ -119,7 +122,6 @@ def get_word_maps() -> Mappings:
 
 # TODO: include these as well
 map_str = '''
-ng ङ् ङ्ग
 gy ग्य् ज्ञ्
 gya ज्ञ ग्या
 '''

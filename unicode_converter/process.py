@@ -68,13 +68,15 @@ if __name__ == '__main__':
         'garyo',
         'hudai',
         'instagram',
-        'aum nama: shiwaaye',
+        'aum nama: shiwaaya',
         'kaam chhaina timro, haNN?',
         'messengermaa message aayo',
         'aNDaa',
         'kaMsha',
         'aNNgaara',
         'yuNNs',
+        'agyaanee',
+        'gYaarej',
         'ma RiShi ho.',
     ]
     converter = Converter()
