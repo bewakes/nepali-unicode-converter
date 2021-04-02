@@ -48,6 +48,15 @@ class Converter:
                 processed,
                 True
             )
+        # Check if word is in direct word mappings
+        for k, v in self.word_maps.items():
+            if current.startswith(k):
+                return State(
+                    current[len(k):],
+                    consumed + current[:len(k)],
+                    processed + v
+                )
+
         # add amkar and aaNkar
         if current.startswith('M'):
             return State(current[1:], consumed + current[0], processed + amkaar)
@@ -73,11 +82,6 @@ class Converter:
     def convert(self, text: str) -> str:
         if not text:
             return text
-        # Check if word is in direct word mappings
-        for k, v in self.word_maps.items():
-            if text.startswith(k):
-                return self.word_maps[k] + self.convert(text[len(k):])
-
         state = State(text)
         while state.remaining:
             state = self.consume(state)
