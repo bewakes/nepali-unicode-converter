@@ -72,3 +72,7 @@ Just omit the 'a' at the end.
 |   kaNN | कँ      |
 |   ka:  | क:     |
 |   mRI  | मृ      |
+
+
+## TODO
+- [ ] Make it more intelligent.
