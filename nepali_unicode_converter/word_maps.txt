@@ -1,3 +1,8 @@
+call कल
+telecom टेलिकम
+plan प्लान
+sms एसएमएस
+SMS एसएमएस
 aum ॐ
 hudai हुँदै
 kathmandu काठमाडौं
@@ -20,3 +25,4 @@ garage ग्यारेज
 radio रेडियो
 cool कूल
 fun फन
+number नम्बर

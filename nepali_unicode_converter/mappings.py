@@ -4,6 +4,19 @@ from typing import Dict
 
 Mappings = Dict[str, str]
 
+numbers: Mappings = {
+   '0': '०',
+   '1': '१',
+   '2': '२',
+   '3': '३',
+   '4': '४',
+   '5': '५',
+   '6': '६',
+   '7': '७',
+   '8': '८',
+   '9': '९'
+}
+
 basic_vowels: Mappings = {
     'a': 'अ',
     'aa': 'आ',
@@ -102,6 +115,8 @@ def get_mappings() -> Mappings:
 
     # add purnabiram
     all_mappings['.'] = '।'
+    # add numbers
+    all_mappings.update(numbers)
     return dict(sorted(all_mappings.items(), key=lambda x: len(x[0]), reverse=True))
 
 

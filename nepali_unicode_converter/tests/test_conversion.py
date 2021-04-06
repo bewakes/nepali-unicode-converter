@@ -3,6 +3,7 @@ from nepali_unicode_converter.convert import Converter
 
 test_cases = [
     ('gaahro', 'गाह्रो'),
+    ('phone number 98432', 'फोन नम्बर ९८४३२'),
     ('aaNNkhaa', 'आँखा'),
     ('samRIddha', 'समृद्ध'),
     ('samaRIddha', 'समृद्ध'),
@@ -25,6 +26,7 @@ test_cases = [
     # TODO: figure out what to do with the next case
     # ('ma {inside {of} the } gYaarej', 'म inside {of}  ग्यारेज्'),
 ]
+
 
 def test_conversion():
     converter = Converter()

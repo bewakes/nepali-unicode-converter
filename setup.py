@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='nepali-unicode-converter',
-    version='1.0.1',
+    version='1.0.2',
     description='Roman text to unicode converter',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
