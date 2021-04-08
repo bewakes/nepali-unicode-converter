@@ -74,5 +74,9 @@ Just omit the 'a' at the end.
 |   mRI  | मृ      |
 
 
+### Numbers
+There is a natural mapping.
+
+
 ## TODO
 - [ ] Make it more intelligent.
