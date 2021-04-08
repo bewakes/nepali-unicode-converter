@@ -126,7 +126,7 @@ def get_word_maps() -> Mappings:
         os.path.dirname(__file__),
         'word_maps.txt'
     )
-    with open(filepath, 'r') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         for line in f.readlines():
             if not line.strip():
                 continue
